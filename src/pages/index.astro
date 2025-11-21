@@ -1,0 +1,33 @@
+---
+import Characters from '../components/Characters.astro';
+import Episodes from '../components/Episodes.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import Gallery from '../components/Gallery.astro';
+import Hero from '../components/Hero.astro';
+import Navbar from '../components/Navbar.astro';
+import Trailer from '../components/Trailer.astro';
+import Layout from '../layouts/Layout.astro';
+
+<Layout title="Stranger Things Landing" description="Landing page inspirada en Stranger Things. Proyecto construido con Astro.">
+  <Navbar />
+  <section class="min-h-screen">
+    <Hero />
+  </section>
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <Characters />
+  </section>
+  <section class="py-20 bg-zinc-900 px-6">
+    <Episodes />
+  </section>
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <Gallery />
+  </section>
+  <section class="py-20 bg-zinc-900 px-6">
+    <Trailer />
+  </section>
+  <section class="py-20 px-6 max-w-4xl mx-auto">
+    <Faq />
+  </section>
+  <Footer />
+</Layout>

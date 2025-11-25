@@ -1,0 +1,78 @@
+---
+const seasons = [
+  {
+    season: 1,
+    episodes: [
+      "Capítulo 1: The Vanishing of Will Byers",
+      "Capítulo 2: The Weirdo on Maple Street",
+      "Capítulo 3: Holly, Jolly",
+      "Capítulo 4: The Body",
+      "Capítulo 5: The Flea and the Acrobat",
+      "Capítulo 6: The Monster",
+      "Capítulo 7: The Bathtub",
+      "Capítulo 8: The Upside Down"
+    ]
+  },
+  {
+    season: 2,
+    episodes: [
+      "Capítulo 1: MADMAX",
+      "Capítulo 2: Trick or Treat, Freak",
+      "Capítulo 3: The Pollywog",
+      "Capítulo 4: Will the Wise",
+      "Capítulo 5: Dig Dug",
+      "Capítulo 6: The Spy",
+      "Capítulo 7: The Lost Sister",
+      "Capítulo 8: The Mind Flayer",
+      "Capítulo 9: The Gate"
+    ]
+  },
+  {
+    season: 3,
+    episodes: [
+      "Capítulo 1: Suzie, Do You Copy?",
+      "Capítulo 2: The Mall Rats",
+      "Capítulo 3: The Case of the Missing Lifeguard",
+      "Capítulo 4: The Sauna Test",
+      "Capítulo 5: The Flayed",
+      "Capítulo 6: E Pluribus Unum",
+      "Capítulo 7: The Bite",
+      "Capítulo 8: The Battle of Starcourt"
+    ]
+  },
+  {
+    season: 4,
+    episodes: [
+      "Capítulo 1: The Hellfire Club",
+      "Capítulo 2: Vecna's Curse",
+      "Capítulo 3: The Monster and the Superhero",
+      "Capítulo 4: Dear Billy",
+      "Capítulo 5: The Nina Project",
+      "Capítulo 6: The Dive",
+      "Capítulo 7: The Massacre at Hawkins Lab",
+      "Capítulo 8: Papa",
+      "Capítulo 9: The Piggyback"
+    ]
+  }
+];
+---
+
+<section class="py-16 bg-black text-white w-full" id="episodes">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-red-500">Episodios</h2>
+
+    {seasons.map(season => (
+      <div class="mb-12">
+        <h3 class="text-3xl font-semibold mb-4">Temporada {season.season}</h3>
+
+        <ul class="space-y-2">
+          {season.episodes.map((ep, index) => (
+            <li class="bg-neutral-900 px-4 py-3 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition">
+                {ep}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>

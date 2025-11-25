@@ -6,16 +6,14 @@ Una landing page de Stranger Things que presenta la serie, con diseño oscuro, t
 Stranger_Page/
 │
 ├─ public/
-│   └─ favicon.svg
+│   ├─ assets/
+│       └─ images/
+│           ├─ hero/
+│           ├─ characters/
+│           ├─ episodes/
+│           └─ gallery/
 │
 ├─ src/
-│   ├─ assets/
-│   │   └─ images/
-│   │       ├─ hero/
-│   │       ├─ characters/
-│   │       ├─ episodes/
-│   │       └─ gallery/
-│   │
 │   ├─ components/
 │   │   ├─ Hero.astro
 │   │   ├─ Navbar.astro

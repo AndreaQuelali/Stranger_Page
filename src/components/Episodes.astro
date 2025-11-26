@@ -1,79 +1,13 @@
 ---
-const seasons = [
-  {
-    season: 1,
-    episodes: [
-      "Capítulo 1: La desaparición de Will Byers",
-      "Capítulo 2: La rara de la calle Maple",
-      "Capítulo 3: Holly, Jolly",
-      "Capítulo 4: El cuerpo",
-      "Capítulo 5: La pulga y el acróbata",
-      "Capítulo 6: El monstruo",
-      "Capítulo 7: La bañera",
-      "Capítulo 8: El Otro Lado"
-    ]
-  },
-  {
-    season: 2,
-    episodes: [
-      "Capítulo 1: MADMAX",
-      "Capítulo 2: Truco o trato",
-      "Capítulo 3: El renacuajo",
-      "Capítulo 4: Will el Sabio",
-      "Capítulo 5: Excava",
-      "Capítulo 6: El espía",
-      "Capítulo 7: La hermana perdida",
-      "Capítulo 8: El Azotamentes",
-      "Capítulo 9: La puerta"
-    ]
-  },
-  {
-    season: 3,
-    episodes: [
-      "Capítulo 1: Suzie, ¿me recibes?",
-      "Capítulo 2: Las ratas del centro comercial",
-      "Capítulo 3: La socorrista desaparecida",
-      "Capítulo 4: La prueba de la sauna",
-      "Capítulo 5: Los desollados",
-      "Capítulo 6: E Pluribus Unum",
-      "Capítulo 7: La mordedura",
-      "Capítulo 8: La batalla de Starcourt"
-    ]
-  },
-  {
-    season: 4,
-    episodes: [
-      "Capítulo 1: El Club del Fuego Infernal",
-      "Capítulo 2: La maldición de Vecna",
-      "Capítulo 3: El monstruo y la superheroína",
-      "Capítulo 4: Querido Billy",
-      "Capítulo 5: El Proyecto Nina",
-      "Capítulo 6: El descenso",
-      "Capítulo 7: La masacre del Laboratorio Hawkins",
-      "Capítulo 8: Papá",
-      "Capítulo 9: El viaje astral"
-    ]
-  }
-];
+import EpisodeTabs from "./interactive/EpisodeTabs.jsx";
 ---
 
-
-<section class="py-16 bg-black text-white w-full" id="episodes">
+<section class="py-16 bg-black text-white">
   <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-10 text-red-500">Episodios</h2>
+    <h2 class="text-4xl font-bold text-red-500 mb-12 text-center">
+      Episodios por Temporada
+    </h2>
 
-    {seasons.map(season => (
-      <div class="mb-12">
-        <h3 class="text-3xl font-semibold mb-4">Temporada {season.season}</h3>
-
-        <ul class="space-y-2">
-          {season.episodes.map((ep, index) => (
-            <li class="bg-neutral-900 px-4 py-3 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition">
-                {ep}
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+    <EpisodeTabs client:load />
   </div>
 </section>

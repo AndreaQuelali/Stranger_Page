@@ -1,0 +1,44 @@
+---
+const faqs = [
+  {
+    question: "¿De qué trata Stranger Things?",
+    answer:
+      "Stranger Things es una serie ambientada en los años 80 que mezcla misterio, ciencia ficción, terror y aventuras, siguiendo a un grupo de amigos que enfrentan criaturas y fenómenos provenientes del Otro Lado."
+  },
+  {
+    question: "¿Cuántas temporadas tiene la serie?",
+    answer:
+      "Actualmente Stranger Things cuenta con 4 temporadas estrenadas, y una quinta temporada confirmada."
+  },
+  {
+    question: "¿Dónde puedo ver la serie?",
+    answer:
+      "Stranger Things está disponible exclusivamente en Netflix."
+  },
+  {
+    question: "¿Qué es el Otro Lado?",
+    answer:
+      "El Otro Lado es una dimensión paralela oscura, peligrosa y llena de criaturas hostiles, conectada a Hawkins a través de brechas abiertas accidentalmente."
+  },
+  {
+    question: "¿Qué personajes son los principales?",
+    answer:
+      "Entre los protagonistas se encuentran Eleven, Mike, Dustin, Lucas, Will, Max, Hopper, Joyce y otros personajes icónicos que forman parte del grupo central."
+  }
+];
+---
+
+<section class="py-16 bg-black text-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-red-500">Preguntas Frecuentes</h2>
+
+    <div class="space-y-6">
+      {faqs.map((item) => (
+        <div class="border border-neutral-700 rounded-lg p-5 bg-neutral-900">
+          <h3 class="text-xl font-semibold mb-2">{item.question}</h3>
+          <p class="text-neutral-300 leading-relaxed">{item.answer}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

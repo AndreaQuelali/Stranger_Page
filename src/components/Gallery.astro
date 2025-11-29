@@ -2,13 +2,19 @@
 import GalleryCarousel from "../components/interactive/Carousel.jsx";
 
 const images = [
-  "/assets/images/gallery/poster1.jpg",
-  "/assets/images/gallery/poster2.jpeg",
-  "/assets/images/gallery/poster3.jpg",
-  "/assets/images/gallery/poster4.jpg",
+  "/assets/images/gallery/image1.jpg",
+  "/assets/images/gallery/image2.jpg",
+  "/assets/images/gallery/image3.jpg",  
+  "/assets/images/gallery/image4.jpg",
+  "/assets/images/gallery/image5.jpg",
+  "/assets/images/gallery/image6.jpg",
+  "/assets/images/gallery/image7.jpg",
 ];
 ---
 
 <section id="gallery">
+  <h2 class="text-4xl font-bold text-red-500 text-center mt-10">
+      Galería
+    </h2>
   <GalleryCarousel images={images} client:load />
 </section>

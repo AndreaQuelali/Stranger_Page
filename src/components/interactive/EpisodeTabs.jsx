@@ -35,8 +35,8 @@ const seasons = {
 
   ],
   4: [
-    { title: "Capítulo 1: El Club Fuego Infernal", desc: "Un nuevo asesino sobrenatural aparece: Vecna." },
-    { title: "Capítulo 2: Maldición de Vecna", desc: "La investigación apunta a un nuevo terror." },
+    { title: "Capítulo 1: El Club Hellfire", desc: "Un nuevo asesino sobrenatural aparece: Vecna." },
+    { title: "Capítulo 2: La maldición de Vecna", desc: "La investigación apunta a un nuevo terror." },
     { title: "Capítulo 3: El monstruo y la superheroína", desc: "Eleven enfrenta su pasado." },
     { title: "Capítulo 4: Querido Billy", desc: "Max corre contra el tiempo para sobrevivir." },
     { title: "Capítulo 5: El Proyecto Nina", desc: "Descubren más sobre los experimentos de Hawkins.",},
@@ -47,38 +47,52 @@ const seasons = {
   ],
 };
 
+const seasonBackgrounds = {
+  1: "/assets/images/episodes/poster1.jpg",
+  2: "/assets/images/episodes/poster2.jpeg",
+  3: "/assets/images/episodes/poster3.jpg",
+  4: "/assets/images/episodes/poster4.jpg",
+};
+
 export default function EpisodeTabs() {
   const [selected, setSelected] = useState(1);
 
   return (
-    <div className="text-white">
-      <div className="flex gap-4 justify-center mb-8">
-        {[1, 2, 3, 4].map((season) => (
-          <button
-            key={season}
-            onClick={() => setSelected(season)}
-            className={`px-4 py-2 rounded-lg border transition
-              ${
-                selected === season
-                  ? "border-red-500 text-red-500"
-                  : "border-neutral-600 hover:border-red-500"
-              }`}
-          >
-            Temporada {season}
-          </button>
-        ))}
-      </div>
+    <div
+      className="text-white p-6 rounded-xl bg-cover bg-center bg-no-repeat transition-all duration-500"
+      style={{
+        backgroundImage: `url(${seasonBackgrounds[selected]})`,
+      }}
+    >
+      <div>
+        <div className="flex gap-4 justify-center mb-8">
+          {[1, 2, 3, 4].map((season) => (
+            <button
+              key={season}
+              onClick={() => setSelected(season)}
+              className={`px-4 py-2 rounded-lg border bg-black transition
+                ${
+                  selected === season
+                    ? "border-red-500 text-red-500"
+                    : "border-neutral-300 hover:border-red-500"
+                }`}
+            >
+              Temporada {season}
+            </button>
+          ))}
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-6 transition-opacity duration-300">
-        {seasons[selected].map((ep, index) => (
-          <div
-            key={index}
-            className="p-5 rounded-lg bg-neutral-900 border border-neutral-700 hover:border-red-500 transition"
-          >
-            <h3 className="text-lg font-semibold text-red-500 mb-2">{ep.title}</h3>
-            <p className="text-neutral-300">{ep.desc}</p>
-          </div>
-        ))}
+        <div className="grid md:grid-cols-2 gap-6 transition-opacity duration-300">
+          {seasons[selected].map((ep, index) => (
+            <div
+              key={index}
+              className="p-5 rounded-lg bg-neutral-900/90 border border-neutral-700"
+            >
+              <h3 className="text-lg font-semibold text-red-500 mb-2">{ep.title}</h3>
+              <p className="text-neutral-300">{ep.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

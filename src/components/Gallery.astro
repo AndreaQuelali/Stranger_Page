@@ -1,0 +1,14 @@
+---
+import GalleryCarousel from "../components/interactive/Carousel.jsx";
+
+const images = [
+  "/assets/images/gallery/poster1.jpg",
+  "/assets/images/gallery/poster2.jpeg",
+  "/assets/images/gallery/poster3.jpg",
+  "/assets/images/gallery/poster4.jpg",
+];
+---
+
+<section id="gallery">
+  <GalleryCarousel images={images} client:load />
+</section>

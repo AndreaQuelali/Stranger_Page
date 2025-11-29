@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import RedLightning from "../components/RedLightning.astro";
 const { title = "Stranger Page", description = "Landing page inspirada en Stranger Things. Proyecto construido con Astro.", } = Astro.props;
 ---
 
@@ -17,6 +18,7 @@ const { title = "Stranger Page", description = "Landing page inspirada en Strang
 
   <body class="bg-black text-white font-sans">
     <main>
+      <RedLightning />
       <slot />
     </main>
   </body>

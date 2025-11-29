@@ -8,6 +8,7 @@ import Hero from '../components/Hero.astro';
 import Navbar from '../components/Navbar.astro';
 import Trailer from '../components/Trailer.astro';
 import Layout from '../layouts/Layout.astro';
+import MusicPlayer from '../components/interactive/MusicPlayer.jsx';
 ---
 
 <Layout title="Stranger Things Landing" description="Landing page inspirada en Stranger Things. Proyecto construido con Astro.">
@@ -15,6 +16,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="min-h-screen">
     <Hero />
   </section>
+  <MusicPlayer client:load />
   <section class="py-20 px-6 max-w-6xl mx-auto">
     <Characters />
   </section>
@@ -30,5 +32,6 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-20 px-6 max-w-4xl mx-auto">
     <Faq />
   </section>
+  <MusicPlayer client:load />
   <Footer />
 </Layout>

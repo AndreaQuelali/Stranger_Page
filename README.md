@@ -12,6 +12,8 @@ Stranger_Page/
 │           ├─ characters/
 │           ├─ episodes/
 │           └─ gallery/
+│   ├─ effects/
+│   ├─ music/
 │
 ├─ src/
 │   ├─ components/
@@ -22,11 +24,13 @@ Stranger_Page/
 │   │   ├─ Gallery.astro
 │   │   ├─ Episodes.astro
 │   │   ├─ Faq.astro
+│   │   ├─ RedLightning.astro
 │   │   ├─ Trailer.astro
 │   │   └─ interactive/
 │   │       ├─ Carousel.jsx
 │   │       ├─ EpisodeTabs.jsx
 │   │       └─ FAQAccordion.jsx
+│   │       └─ MusicPlayer.jsx
 │   │
 │   ├─ layouts/
 │   │   └─ MainLayout.astro
